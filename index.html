@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Undangan Spesial Untukmu 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Efek hati & confetti mengambang (di-generate otomatis via JS) -->
+  <div id="floating-fx"></div>
+
+  <!-- Indikator progress step -->
+  <div class="progress-dots" id="progressDots">
+    <span class="dot active" data-dot="1"></span>
+    <span class="dot" data-dot="2"></span>
+    <span class="dot" data-dot="3"></span>
+    <span class="dot" data-dot="4"></span>
+  </div>
+
+  <main class="app">
+
+    <!-- STEP 1: AMPLOP -->
+    <section class="step step-active" id="step1" data-step="1">
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="envelope-letter">
+            <p class="to-text">Untuk</p>
+            <h2 class="recipient-name" id="recipientNameEnvelope">Sayang</h2>
+          </div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal" id="envelopeSeal">💌</div>
+        </div>
+        <p class="hint-text">Ketuk amplopnya untuk membuka</p>
+      </div>
+    </section>
+
+    <!-- STEP 2: KARTU UNDANGAN -->
+    <section class="step" id="step2" data-step="2">
+      <div class="card fade-in-up">
+        <div class="card-icon">💖</div>
+        <h1 class="card-title">Ini Special buat kamu ajaa...</h1>
+        <p class="card-message" id="invitationMessage">
+          Sebelum semuanya terungkap, aku ingin mengajakmu bernostalgia sebentar.
+          Ada beberapa kenangan indah yang ingin aku tunjukkan, lalu satu ucapan
+          tulus dari hati untukmu. Siap?
+        </p>
+        <button class="btn-next" data-next="3">Lanjut ➜</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: GALERI FOTO -->
+    <section class="step" id="step3" data-step="3">
+      <div class="gallery-wrap fade-in-up">
+        <h2 class="gallery-title">Kenangan Kita 📸</h2>
+        <div class="gallery-slider">
+          <button class="slider-btn prev" id="prevPhoto">‹</button>
+          <div class="gallery-photo-frame">
+            <img id="galleryImg" src="" alt="Kenangan" />
+            <p class="gallery-caption" id="galleryCaption"></p>
+          </div>
+          <button class="slider-btn next" id="nextPhoto">›</button>
+        </div>
+        <div class="gallery-dots" id="galleryDots"></div>
+        <button class="btn-next" data-next="4">Lanjut ke Ucapan ➜</button>
+      </div>
+    </section>
+
+    <!-- STEP 4: UCAPAN FINAL -->
+    <section class="step" id="step4" data-step="4">
+      <div class="final-wrap fade-in-up">
+        <div class="cake-wrap" id="cakeWrap">
+          <div class="cake">
+            <div class="candle" id="candle">
+              <div class="flame" id="flame"></div>
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-base"></div>
+          </div>
+          <p class="hint-text small">Tiup lilinnya ✨ (klik lilin)</p>
+        </div>
+
+        <h1 class="final-title">
+          Selamat Ulang Tahun,<br />
+          <span id="recipientNameFinal">Sayang</span>! 🎉🎂
+        </h1>
+
+        <p class="final-message" id="finalMessage">
+          Semoga di usia yang baru ini, kamu selalu dikelilingi kebahagiaan,
+          kesehatan, dan orang-orang yang menyayangimu. Terima kasih sudah
+          menjadi bagian terindah dalam hidupku. Aku sayang kamu, sekarang,
+          esok, dan selamanya. ❤️
+        </p>
+
+        <p class="signature" id="signature">— Dari aku, dengan sepenuh hati</p>
+
+        <button class="btn-replay" id="replayBtn">🔁 Ulangi</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
